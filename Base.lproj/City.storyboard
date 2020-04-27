@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CityViewController" customModule="WeatherApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="yd2-Qi-hfx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPb-rL-QSF">
+                                        <rect key="frame" x="362" y="52" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DnO-RP-i81"/>
+                                            <constraint firstAttribute="width" constant="44" id="tEA-Ud-ghR"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6CF-QC-pXn"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write city here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kuc-Y1-MvT">
+                                        <rect key="frame" x="75" y="423" width="264" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="CNH-kM-DCe"/>
+                                            <constraint firstAttribute="height" constant="50" id="icS-za-4pM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCH-wa-0W9">
+                                        <rect key="frame" x="125" y="505" width="164" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="164" id="Wns-YA-5ac"/>
+                                            <constraint firstAttribute="height" constant="44" id="wC1-ps-PpU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <state key="normal" title="Update Weather">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateWeatherByCityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tju-vz-Fuh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kuc-Y1-MvT" firstAttribute="centerX" secondItem="yd2-Qi-hfx" secondAttribute="centerX" id="Bws-kQ-yKr"/>
+                                    <constraint firstItem="RQd-eG-jNx" firstAttribute="trailing" secondItem="cPb-rL-QSF" secondAttribute="trailing" constant="8" id="Zcg-BH-izz"/>
+                                    <constraint firstItem="Kuc-Y1-MvT" firstAttribute="centerY" secondItem="yd2-Qi-hfx" secondAttribute="centerY" id="kZJ-H7-5Bh"/>
+                                    <constraint firstItem="cPb-rL-QSF" firstAttribute="top" secondItem="RQd-eG-jNx" secondAttribute="top" constant="8" id="p1a-5b-x4t"/>
+                                    <constraint firstItem="bCH-wa-0W9" firstAttribute="top" secondItem="Kuc-Y1-MvT" secondAttribute="bottom" constant="32" id="udp-g7-q0U"/>
+                                    <constraint firstItem="bCH-wa-0W9" firstAttribute="centerX" secondItem="yd2-Qi-hfx" secondAttribute="centerX" id="wKo-sd-rXX"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="RQd-eG-jNx"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="CityTextField" destination="Kuc-Y1-MvT" id="6r6-Ys-ABe"/>
+                        <outlet property="cityTextField" destination="Kuc-Y1-MvT" id="F4i-J7-9eJ"/>
+                        <outlet property="updateWeatherButton" destination="bCH-wa-0W9" id="HEW-hO-sf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
+</document>
